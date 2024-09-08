@@ -55,6 +55,7 @@ export const FirebaseProvider = ({ children }) => {
     };
 
     handleLogin();
+    // eslint-disable-next-line
   }, [userHistory]);
 
   useEffect(() => {
@@ -62,6 +63,7 @@ export const FirebaseProvider = ({ children }) => {
     const unsubscribeUsers = database.addUserListener(setUserHistory);
 
     return () => unsubscribeUsers();
+    // eslint-disable-next-line
   }, [userData]);
 
   useEffect(() => {

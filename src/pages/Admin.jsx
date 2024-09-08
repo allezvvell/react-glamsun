@@ -49,7 +49,10 @@ export default function Admin() {
         const valueArr = Object.values(value);
         newIsInvalid[key] = valueArr.includes(true) ? false : true;
       } else {
-        if (!value || (typeof value === 'text' && value.trim().length === 0)) {
+        if (
+          !value ||
+          (typeof value === 'string' && value.trim().length === 0)
+        ) {
           newIsInvalid[key] = true;
         } else {
           newIsInvalid[key] = false;

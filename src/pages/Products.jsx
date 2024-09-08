@@ -29,6 +29,7 @@ export default function Products() {
   useEffect(() => {
     const unsubscribe = database.addProductsListener(category, queryClient);
     return () => unsubscribe();
+    // eslint-disable-next-line
   }, [categoryName]);
 
   if (isLoading) return <LoadingSpinner />;

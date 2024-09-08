@@ -64,6 +64,7 @@ export default function ProductDetail() {
     };
 
     fetchProduct();
+    // eslint-disable-next-line
   }, [productId]);
 
   if (isLoading) return <LoadingSpinner />;
