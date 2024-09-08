@@ -45,7 +45,7 @@ export default function Admin() {
     }
     for (const key in productData) {
       const value = productData[key];
-      if (typeof value === 'obj') {
+      if (typeof value === 'object') {
         const valueArr = Object.values(value);
         newIsInvalid[key] = valueArr.includes(true) ? false : true;
       } else {

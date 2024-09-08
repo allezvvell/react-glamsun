@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { useWishButton } from '../hooks/useWishButton';
 
-export default function ({ product }) {
+export default function ProductCard({ product }) {
   const { isHover, setIsHover, isInWish, handleWishButtonClick } =
     useWishButton(product.productId);
 
