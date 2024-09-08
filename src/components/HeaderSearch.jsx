@@ -38,7 +38,7 @@ export default function HeaderSearch({ isOn, setIsOn }) {
       </div>
       <button
         className={`absolute right-5 top-1/2 -translate-y-1/2 tran-opacity text-3xl ${
-          isOn ? 'visible opacity-100' : 'invibisible opacity-0'
+          isOn ? 'visible opacity-100 z-0' : 'invibisible opacity-0 -z-10'
         }`}
         onClick={() => {
           setIsOn(false);
