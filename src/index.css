@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,39 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input {
+  outline: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+/* body scroll 제어 */
+body.scroll-lock {
+  overflow: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+/* 공통 클래스  */
+@layer components {
+  .input {
+    @apply border border-gray-300 p-4 placeholder:text-sm mb-2 w-full;
+  }
+  .grid-layout-default {
+    @apply grid grid-cols-1 gap-x-3 gap-y-11 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2;
+  }
+}
+
+.tran-opacity {
+  transition: opacity 300ms;
+}
+.tran-width {
+  transition: width 400ms;
 }
